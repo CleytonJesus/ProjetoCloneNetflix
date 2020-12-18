@@ -1,0 +1,107 @@
+.bootstrap-iso {
+  /*Folha de estilização : Cuida da aparência do site.
+
+Por padrão os navegadores colocam espaços entre os elementos
+
+IMPORTANTE
+
+ *criar Resets(forçando para que todos os navegadores interpretem o que foi digitado)
+*/
+  /*Iniciando variáveis*/
+  /*Elementos base*/
+  /*Filme principal*/
+  /* Sobre wrapper(envelopar) aula 6 */
+  /*Criando um carrossel*/
+}
+.bootstrap-iso :root {
+  --vermelho: #E50914;
+  --preta: #141414;
+}
+.bootstrap-iso * {
+  /*Formatando tudo que há no documento*/
+  margin: 0;
+  padding: 0;
+  /*Mantem os elementos com o tamanho específicado, sem que haja modificações provocadas pelo o conteúdo interno.*/
+  box-sizing: border-box;
+}
+.bootstrap-iso body {
+  /*Adicionando a variável criada na raíz(root)*/
+  background: var(--preta);
+  font-family: 'Arial', Times, serif;
+  color: white;
+}
+.bootstrap-iso header .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.bootstrap-iso header .logo {
+  margin-left: 5px;
+  color: var(--vermelho);
+  font-family: 'Arial Black', Times;
+  font-size: 40px;
+}
+.bootstrap-iso header nav a {
+  text-decoration: none;
+  color: #AAA;
+  margin-right: 10px;
+}
+.bootstrap-iso header nav a:hover {
+  color: #fff;
+}
+.bootstrap-iso .filme-principal {
+  font-size: 16px;
+  background: url('../img/TheBoys.jpg'), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%);
+  height: 400px;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.bootstrap-iso .filme-principal .container .descricao {
+  margin-top: 10px;
+  margin-bottom: 40px ;
+}
+.bootstrap-iso .filme-principal .titulo {
+  font-size: 40px;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  margin-top: 15%;
+}
+.bootstrap-iso .botao {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  margin-right: 15px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.3s ease all;
+}
+.bootstrap-iso .botao:hover {
+  background-color: white;
+  color: black;
+}
+.bootstrap-iso .botao i {
+  margin-right: 8px;
+}
+.bootstrap-iso .container {
+  margin-left: 20px;
+}
+.bootstrap-iso .filme-principal .container {
+  width: 70%;
+}
+.bootstrap-iso .box-filme {
+  height: 100%;
+  width: 100%;
+  display: block;
+  border: none;
+}
+.bootstrap-iso .item .box-filme:hover {
+  border: rgba(255, 255, 255, 0.5) 2.5px solid;
+  transition: ease all 1s;
+}
+.bootstrap-iso .carrosel-filmes {
+  margin-top: 5px ;
+}

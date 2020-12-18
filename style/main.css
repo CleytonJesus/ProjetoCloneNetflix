@@ -1,0 +1,187 @@
+/*Folha de estilização : Cuida da aparência do site.
+
+Por padrão os navegadores colocam espaços entre os elementos
+
+IMPORTANTE
+
+ *criar Resets(forçando para que todos os navegadores interpretem o que foi digitado)
+*/
+
+/*Iniciando variáveis*/
+
+:root{
+    --vermelho:#E50914;
+    --preta:#141414;
+}
+
+*{
+    /*Formatando tudo que há no documento*/
+    margin:0;
+    padding:0;
+    /*Mantem os elementos com o tamanho específicado, sem que haja modificações provocadas pelo o conteúdo interno.*/
+    box-sizing: border-box;
+}
+
+/*Elementos base*/
+
+body{
+    /*Adicionando a variável criada na raíz(root)*/
+    background: var(--preta) ;
+    font-family: 'Arial', Times, serif;
+    color:white;
+}
+
+
+
+header .container{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content:space-between;
+}
+
+header .logo{
+    margin-left: 5px;
+    color: var(--vermelho);
+    font-family: 'Arial Black', Times;
+    font-size: 40px;
+
+}
+
+header nav a{
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;
+}
+
+header nav a:hover{
+    color: #fff;
+}
+
+/*Filme principal*/
+
+.filme-principal{
+    font-size: 16px;
+    background: url('../img/TheBoys.jpg'), linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%);
+
+    height: 400px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+.filme-principal .container .descricao{
+    margin-top: 10px;
+    margin-bottom:40px ;
+}
+
+.filme-principal .titulo{
+    font-size: 40px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    margin-top: 15%;
+}
+
+.botao{
+    background-color: rgba(0,0, 0, .50);
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: .3s ease all;
+}
+
+.botao:hover{
+    background-color: white;
+    color: black;
+}
+
+.botao i{
+    margin-right: 8px;
+}
+
+/* Sobre wrapper(envelopar) aula 6 */
+
+.container{
+    margin-left: 20px;
+}
+
+.filme-principal .container{
+    width: 70%;
+}
+
+/*Criando um carrossel*/
+
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+    border: none;
+}
+
+.item .box-filme:hover{
+    
+    border: rgba(255,255, 255, .50) 2.5px solid;
+    transition: ease all 1s;
+}
+
+.carrosel-filmes{
+    margin-top:5px ;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgba(0,0,0,0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+  }
+
+  .modal:target {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .modal > div {
+    width: 400px;
+    position: relative;
+    margin: 10% auto;
+    padding: 15px 20px;
+    background: #fff;
+  }
+
+  .fechar {
+    position: absolute;
+    width: 30px;
+    right: 0px;
+    top: 0px;
+    text-align: center;
+    line-height: 30px;
+    margin-top: 5px;
+    background: #ff0000;
+    border-radius: 10%;
+    font-size: 16px;
+    color: #ffffff;
+  }
+
+  .modal{
+      text-align: center;
+      margin:30px 5px;
+  }
+
+  .modal> h1 h2 p{
+      font-family: Arial, Helvetica, sans-serif;
+     
+  }

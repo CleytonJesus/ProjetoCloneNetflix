@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<!--HTML = cuida da estrutura do site-->
+<!--Configurações da página-->
+    <meta charset="UTF-8">
+    <!--Para trabalhar com mobile(abaixo)-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="style/main.css">
+
+    <!--OWL-->
+    <link rel="stylesheet" href="style/Owl/owl.carousel.min.css"
+    <link rel="stylesheet" href="style/Owl/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="style/responsive.css">
+
+    <!--Modal-->
+	
+        <link rel="stylesheet" href="https://unpkg.com/modal-video@2.0.1/css/modal-video.min.css">
+        
+       
+    <title>Netflix</title>
+</head>
+<body>
+    <!--Tag semântica(Dar siginificado ao programador) : Div(espécie de container)-->
+    <header>
+        <!--Cabeçalho : Navbar-->
+        <div class="container">
+            <h2 class="logo">NETFLIX</h2>
+       
+        <nav>
+            <!--Tag semântica : navegação-->
+            <a href="#">Início</a>
+            <a href="#">Séries</a>
+            <a href="#">Filmes</a>
+            <a href="#">Documentários</a>
+        </nav> 
+        </div>
+    </header>
+
+    <main>
+        <!--Tag para que sistemas de buscas percebam que aqui é o conteúdo principal do site-->
+        <div class="filme-principal">
+            <div class="container">
+                <!--Wrapper = mantem o conteúdo-->
+                <h3 class="titulo">THE BOYS</h3>
+                <p class="descricao"> 
+                    Na trama, conhecemos um mundo em que super-heróis são as maiores celebridades do planeta, e rotineiramente abusam dos seus poderes ao invés de os usarem para o bem. Assista agora a nova temporada de THE BOYS!
+                </p>
+
+                <div class="botoes">
+                    <button  role="button" class="botao  js-video-btn" data-video-id="06rueu_fh30" >
+                        <!--ROLE = informar aos navegadores que o elemento é um botão-->
+                        <i class="fas fa-play"></i>
+                        ASSISTIR AGORA
+                    </button>
+                    <a href="#abrirModal"><button id="btn-mensagem" role="button" class="botao" data-toggle="modal" data-target="#modal-mensagem">
+                        <i class="fas fa-info-circle"></i>
+                        MAIS INFORMAÇÕES
+                    </button></a>
+                </div>     
+            </div>
+        </div>
+    </main>
+
+    <div class="carrosel-filmes">
+        <div class="owl-carousel owl-theme">
+
+            <div class="item">
+                <img class="box-filme" src="img/capa_BadBoys.jpg" alt="Capa do filme Bad Boys">
+            </div>
+
+            <div class="item">
+                <img class="box-filme" src="img/capa_Batman.jpg" alt="Capa do filme Batman">
+            </div>
+
+            <div class="item">
+                <img class="box-filme" src="img/capa_GOT.jpg" alt="Capa da série Game Of Thrones">
+            </div>
+
+            <div class="item">
+                <img class="box-filme" src="img/capa_LDJ.jpg" alt="Capa do filme da Liga da Justiça">
+            </div>
+
+            <div class="item">
+                <img class="box-filme" src="img/capa_Legado_Explosivo.jpg" alt="Capa do filme Legado Explosivo">
+            </div>
+
+            <div class="item">
+                <img class="box-filme" src="img/capa_Mandalorian.jpg" alt="Capa da série The Mandalorian">
+            </div>
+
+            <div class="item">
+                <img class="box-filme" src="img/capa_MK.jpg" alt="Capa do filme animado Mortal Kombat">
+            </div>
+            
+            <div class="item">
+                <img class="box-filme" src="img/capa_O_Gambito_Da_Rainha.jpg" alt="Capa da série O Gambito da Rainha">
+            </div>
+
+            <div class="item">
+                <img class="box-filme" src="img/capa_Sobrenatural.jpg" alt="Capa da série Sobrenatural">
+            </div>
+            
+        </div>
+    </div>
+
+    <!--Modal-->
+
+    <div id="abrirModal" class="modal ">
+        <a href="#fechar" title="fechar" class="fechar"><i class="far fa-times-circle"></i></a>
+        <h1>The Boys (2019)</h1><br/>
+        <h2>Sinopse</h2>
+        <p>The Boys é uma série de televisão norte americana de super-heróis baseado na serie de histórias em quadrinhos de mesmo nome de Garth Ennis e Darick Robertson. Desenvolvido por Eric Kripke para a plataforma de streaming Prime Video, segue a equipe de justiceiros de mesmo nome que luta contra os Supers, indivíduos superpoderosos que abusam de suas habilidades.</p><br/>
+        <h2>Criação:</h2>
+        <p>Eric Kripke</p><br/>
+        <h2>Elenco:</h2>
+        <ul>
+            <li>Karl Urban - Billy Butcher</li>
+            <li>Jack Quaid - Hughie Campbell</li>
+            <li>Antony Starr - Homelander</li>
+            <li>Erin Moriarty - Annie January / Starlight</li>
+            <li>Dominique McElligott - Queen Maeve</li>
+            <li>Jessie T. Usher - A-Train</li>
+            <li>Laz Alonso - Mother's Milk</li>
+            <li>Chace Crawford - The Deep</li>
+            <li>Tomer Kapon - Frenchie</li>
+            <li>Nathan Mitchell - Black Noir</li>
+        </ul>
+    </div>
+    
+    <!--Fim-->
+
+    <script src="https://kit.fontawesome.com/4689973e0d.js" crossorigin="anonymous"></script>
+    <script src="js/Owl/jquery.min.js"></script>
+    <script src="js/Owl/owl.carousel.min.js"></script>
+    <script src="js/Owl/setup.js"></script>
+
+    <script src="js/modal/jquery-modal-video.min.js"></script>
+    <script src="js/modal/modal-video.min.js"></script>
+    <script src="js/modal/setupModal.js"></script>
+
+   
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
